@@ -23,7 +23,7 @@ def websScrape(url):
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
     # Find links for Privacy Policy and Terms and Conditions
-
+    
     privacy_policy_link = soup.find('a', href=True, string='Privacy Policy')['href']
     print(privacy_policy_link)
     # terms_conditions_link = soup.find('a', href=True, string='terms of use')['href']
